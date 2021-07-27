@@ -1,5 +1,9 @@
-FROM alpine:latest
-RUN apk add --no-cache nodejs npm
+FROM amazonlinux:latest
+RUN yum install -y aws-cli
+RUN yum install -y gcc-c++ make
+RUN curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+RUN yum install -y nodejs
+
 WORKDIR /app
 COPY package.json /app
 RUN npm install
