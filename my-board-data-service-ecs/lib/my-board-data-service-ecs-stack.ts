@@ -24,7 +24,7 @@ export class MyBoardDataServiceEcsStack extends cdk.Stack {
       cluster: cluster,
       memoryLimitMiB: 1024,
       cpu: 512,
-      desiredCount: 2,
+      desiredCount: 1,
       taskImageOptions: {
         image: ecs.ContainerImage.fromAsset("./backend/"),
         environment: {
