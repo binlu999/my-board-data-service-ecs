@@ -70,7 +70,7 @@ function setUpParams() {
     .option('p', {
     alias: 'port',
     description: 'listening port',
-    default: 18000
+    default: 8080
     })
     .option('k', {
     alias: 'key',

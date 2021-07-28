@@ -6,7 +6,8 @@ const post = function(req, res){
 }
 
 const get = function(req, res){
-    res.send(coService.get(req.params._id))
+    console.log("id %s",req.params._pkey)
+    res.send(coService.get(req.params._pkey))
 }
 
 const getAll = function(req, res){
